@@ -78,6 +78,9 @@ class TestMessage < Minitest::Test
     end
 
     should "have the correct data" do
+      $stderr.puts "Currenty value of Maildir::Message.serializer: #{Maildir::Message.serializer}"
+      $stderr.puts "@data: #{@data.inspect}"
+      $stderr.puts "@message.data: #{@message.data.inspect}"
       assert_equal @data, @message.data
     end
 

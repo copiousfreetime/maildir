@@ -26,6 +26,7 @@ class Maildir::Message
   # DEPRECATED: Set the serializer.
   # @see Maildir.serializer=
   def self.serializer=(serializer)
+    $stderr.puts "assigning Maildir.serializer to #{serializer} from #{caller(1).first}"
     Maildir.serializer = serializer
   end
 
